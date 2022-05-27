@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>This will show all our dogs</h1>
+<div class="dogs">
+    {%for dog in dogs%}
+    <h3>{{dog.name}}</h3>
+    <img src="{{dog.img}}" alt="{{dog.name}}"/>
+    <h4>{{dog.type}}</h4>
+    <p>{{dog.bio}}</p>
+    {% endfor %}
+</div>
+{%endblock%}
